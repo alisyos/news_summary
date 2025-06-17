@@ -205,7 +205,7 @@ export default function Home() {
               <p className="text-sm text-gray-600">AI가 기사를 분석하고 요약을 생성하고 있습니다</p>
             </div>
           </div>
-        ) : (
+        ) : summaryResult ? (
           /* 결과 표시 */
           <div className="h-full overflow-y-auto">
             <SummaryResult
@@ -214,7 +214,7 @@ export default function Home() {
               onRegenerate={handleSummarize}
             />
           </div>
-        )}
+        ) : null}
       </div>
     </div>
   )
